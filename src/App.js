@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
   return (
@@ -12,14 +13,22 @@ function App() {
 }
 
 const districtStyle ={
-  backgroundColor: 'yellow',
+  backgroundColor: 'lightblue',
   margin: '20px',
-  borderRadius: '20px'
+  borderRadius: '20px',
+  padding: '20px'
 }
 function District(props){
+  const [power, setPower] = useState(1);
+  const boostPower = () => {
+    const newPower = power * 2;
+    setPower(newPower);
+  }
   return (
     <div style={districtStyle}>
       <h2>Name: {props.city}</h2>
+      <h4>Power: {power}</h4>
+      <button onClick={boostPower}>Boost The Power</button>
       <p>Speciality: {props.country}</p>
     </div>
   )
