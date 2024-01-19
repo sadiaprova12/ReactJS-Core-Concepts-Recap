@@ -4,9 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <District></District>
-      <District></District>
-      <District></District>
+      <District city="New York" country="USA"></District>
+      <District city="Canada" country="North America"></District>
+      <District city="Berlin" country="Germany"></District>
     </div>
   );
 }
@@ -16,11 +16,11 @@ const districtStyle ={
   margin: '20px',
   borderRadius: '20px'
 }
-function District(){
+function District(props){
   return (
     <div style={districtStyle}>
-      <h2>Name: </h2>
-      <p>Speciality: </p>
+      <h2>Name: {props.city}</h2>
+      <p>Speciality: {props.country}</p>
     </div>
   )
 }
