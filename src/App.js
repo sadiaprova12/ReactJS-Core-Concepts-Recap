@@ -11,9 +11,14 @@ function App() {
   );
 }
 
+const districtStyle ={
+  backgroundColor: 'yellow',
+  margin: '20px',
+  borderRadius: '20px'
+}
 function District(){
   return (
-    <div>
+    <div style={districtStyle}>
       <h2>Name: </h2>
       <p>Speciality: </p>
     </div>
